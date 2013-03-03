@@ -2,12 +2,12 @@
 
 Summary:	Weather plugin for XFCE panel
 Name:		xfce4-plugin-weather
-Version:	0.8.2
+Version:	0.8.3
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.8/%{org_name}-%{version}.tar.bz2
-# Source0-md5:	278654f792de1800b77cbcb9bdd8ed3c
+# Source0-md5:	755b33089c02afe88abb39253003a7f3
 URL:		http://goodies.xfce.org/projects/panel-plugins/weather
 BuildRequires:	autoconf
 BuildRequires:	automake
