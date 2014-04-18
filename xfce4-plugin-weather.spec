@@ -3,7 +3,7 @@
 Summary:	Weather plugin for XFCE panel
 Name:		xfce4-plugin-weather
 Version:	0.8.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.8/%{org_name}-%{version}.tar.bz2
@@ -13,6 +13,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkg-config
+BuildRequires:	upower-devel
 BuildRequires:	xfce4-dev-tools
 BuildRequires:	xfce4-panel-devel
 Requires(post,postun):	/usr/bin/gtk-update-icon-cache
@@ -43,8 +44,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/xfce4/panel-plugins/*.la
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/libweather.la
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
 
 %find_lang %{org_name}
 
